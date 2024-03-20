@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My shopping Cart</title>
+    <!-- <link rel="stylesheet" href="KARL.CSS"> -->
+    <link rel="stylesheet" href="zero.css">
+    <style>
+        *{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    }
+    a{
+        text-decoration: none;
+       color: rgb(218, 208, 208);
+    }
+    .nav-item {
+        text-decoration: none;
+        list-style-type: none;
+    }
+    .navbar{
+        padding:0 24px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        min-height: 70px;
+        
+    }
+    .nav-menu{
+        display: flex;
+        gap: 50px;
+        justify-content: space-between;
+    }
+    .navbrand img{
+        width: 75px;
+    }
+    .navlink:hover{
+        color: aqua;
+    }
+    .navlink{
+        transition: 0.7s ease-in;
+    }
+    .humburgar{
+        display: none;
+        cursor: pointer;
+    } 
+    .bar{
+        display: block;
+        width: 25px ;
+        margin: 5px auto;
+        height: 3px;
+        background-color: azure;
+    
+    }
+    header{
+        background-color:black;
+    }  
+    </style>
+    <body>
+     <!-- <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="GROUP LOGO.jpg"width="75px" >
+                </div>    
+                <nav>
+                    <ul class="topnav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="">Product</a></li>
+                        <li><a href="ABOUT TAK.HTML">About</a></li>
+                        <li><a href="Lumahlee.HTML">Contact</a></li>
+                        <li><a href="copy cart.html"></a></li>
+                </ul>
+            </nav>
+            <a href="copy cart.html">
+            <img src="shopping-cart.png" width="30px" height="30px">
+            </a>
+            </div></div></div> 
+            Product Page -->
+            <header>
+                <nav class="navbar">
+                    <a class="navbrand" href="">
+                        <img src="GROUP LOGO.jpg" alt="logo">
+                    </a>
+                <ul class="nav-menu">
+                        <li class="nav-item"><a href="" class="navlink">Home</a></li>
+                        <li class="nav-item"><a href=""class="navlink">Product</a></li>
+                        <li class="nav-item"><a href=""class="navlink">About</a></li>
+                        <li class="nav-item"><a href=""class="navlink">Contact</a></li>
+                        <!-- <li class="nav-iteam"><a href="copy cart.html"></a></li> -->
+                <!-- </nav> -->
+                <a href="copy cart.html">
+            
+                    <img src="shopping-cart.png" width="30px" height="30px">
+                    </a>
+                </nav>
+                
+               <div class="hamburgar">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                </div>
+                
+            </header>
+</head>
+<body>
+            <div class="cart">
+                <h1>Our Cart</h1>
+                <table>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Item Price</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="itemName" value="" readonly></td>
+                        <td><input type="number" id="quantity" value="" readonly></td>
+                        <td><input type="number" id="itemPrice" value="" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="itemName" value="" readonly></td>
+                        <td><input type="number" id="quantity" value="" readonly></td>
+                        <td><input type="number" id="itemPrice" value="" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="itemName" value="" readonly></td>
+                        <td><input type="number" id="quantity" value="" readonly></td>
+                        <td><input type="number" id="itemPrice" value="" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="itemName" value="" readonly></td>
+                        <td><input type="number" id="quantity" value="" readonly></td>
+                        <td><input type="number" id="itemPrice" value="" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="itemName" value="" readonly></td>
+                        <td><input type="number" id="quantity" value="" readonly></td>
+                        <td><input type="number" id="itemPrice" value="" readonly></td>
+                    </tr>
+                 </table>
+                 <button class="btn1">SUBMIT</button>
+            </div>
+            <script>
+                //Automatically update cart when an item is selected
+                document.getElementById("itemName").addEventListener("change", function() {
+                  const itemName = document.getElementById("itemName").value;
+                   const itemPrice = parseFloat(document.getElementById("itemPrice").value);
+                    const quantity = totalitemselected; // Fixed quantity 
+                    const totalPrice = quantity * itemPrice;
+                    document.getElementById("quantity").value = quantity;
+                    document.getElementById("totalPrice").value = totalPrice.toFixed(2);
+        
+                    // Log the selected item to the console (you can modify this to add it to the cart)
+                console.log(`Selected item: ${itemName}, Price: $${itemPrice}, Quantity: ${quantity}`);
+                });
+            </script>
+    <hr>
+    <footer>
+        <div class="bottom-bar">
+        <div class="max">
+            <div class="footer-content1">
+                <h3>Contacts Us</h3>
+                <p>Email:TAK@gmail.com</p>
+                <p>Phone:671403969</p>
+                <p>Address:bitsvalley ilab city-chemist</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick links</h3>
+                <ul class="list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="ABOUT TAK.HTML">About</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="Lumahlee.HTML">Contact</a></li>
+                    <li><a href="TRADE WITH US.html">Why trade with us</a></li>
+                    </ul>
+                    </div>
+                    
+                    <div class="footer-content3">
+                        <h3>Follow Us</h3>
+                       <a href="#"><img src="facebook2.jpg" width="50px"></a>
+                       <a href="#"><img src="instagram.jpg" width="50px"></a>
+                       <a href="#"><img src="twiter.jpg" width="50px"></a>
+                       <a href="#"><img src="whatsapp,jpg.jpg" width="50px"></a>
+                    </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2024 bitsvalley .All right reserved</p>
+        </footer>
+</body>
+</html>

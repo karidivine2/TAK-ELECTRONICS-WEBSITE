@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Shopping Cart</title>
+    <link rel="stylesheet" href="TAK CSS\zero.css">
+    <style>
+    body {
+        background-color: beige;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    h3 {
+        /* font-style: italic; */
+        text-align:left;
+    }
+    .column {
+        padding: 10px;
+    }
+    .btn1{
+display: inline-block;
+background-color: rgb(85, 135, 166);
+padding: 5px 20px;
+border-radius: 30px;
+ color: beige; 
+}
+.footer{
+    align-items: left;
+}
+</style>
+</head>
+<body>
+    <div class="cart">
+        <h1>Our Cart</h1>
+        <table>
+            <tr>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Item Price</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="itemName" value="" readonly></td>
+                <td><input type="number" id="quantity" value="" readonly></td>
+                <td><input type="number" id="itemPrice" value="" readonly></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="itemName" value="" readonly></td>
+                <td><input type="number" id="quantity" value="" readonly></td>
+                <td><input type="number" id="itemPrice" value="" readonly></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="itemName" value="" readonly></td>
+                <td><input type="number" id="quantity" value="" readonly></td>
+                <td><input type="number" id="itemPrice" value="" readonly></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="itemName" value="" readonly></td>
+                <td><input type="number" id="quantity" value="" readonly></td>
+                <td><input type="number" id="itemPrice" value="" readonly></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="itemName" value="" readonly></td>
+                <td><input type="number" id="quantity" value="" readonly></td>
+                <td><input type="number" id="itemPrice" value="" readonly></td>
+            </tr>
+         </table>
+         <button class="btn1">SUBMIT</button>
+    </div>
+    <script>
+        //Automatically update cart when an item is selected
+        document.getElementById("itemName").addEventListener("change", function() {
+          const itemName = document.getElementById("itemName").value;
+           const itemPrice = parseFloat(document.getElementById("itemPrice").value);
+            const quantity = totalitemselected; // Fixed quantity 
+            const totalPrice = quantity * itemPrice;
+            document.getElementById("quantity").value = quantity;
+            document.getElementById("totalPrice").value = totalPrice.toFixed(2);
+
+            // Log the selected item to the console (you can modify this to add it to the cart)
+        console.log(`Selected item: ${itemName}, Price: $${itemPrice}, Quantity: ${quantity}`);
+        });
+        </script>
+         <hr>
+         <footer>
+             <div class="bottom-bar">
+             <div class="max">
+                 <div class="footer-content1">
+                     <h3>Contacts Us</h3>
+                     <p>Email:TAK@gmail.com</p>
+                     <p>Phone:671403969</p>
+                     <p>Address:bitsvalley ilab city-chemist</p>
+                 </div>
+                 <div class="footer-content">
+                    <h3>Quick links</h3>
+                    <ul class="list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="ABOUT TAK.HTML">About</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="Lumahlee.HTML">Contact</a></li>
+                        <li><a href="TRADE WITH US.html">Why trade with us</a></li>
+                        </ul>
+                        </div>
+                         
+                         <div class="footer-content3">
+                             <h3>Follow Us</h3>
+                             <a href="#"><img src="IMAGES\facebook2.jpg" width="50px"></a>
+                             <a href="#"><img src="IMAGES\instagram.jpg" width="50px"></a>
+                             <a href="#"><img src="IMAGES\twiter.jpg" width="50px"></a>
+                             <a href="#"><img src="IMAGES\whatsapp,jpg.jpg" width="50px"></a>
+                         </div>
+             </div>
+             <div class="bottom-bar">
+                 <p>&copy; 2024 bitsvalley .All right reserved</p>
+             </footer>
+     </body>
+     </html>

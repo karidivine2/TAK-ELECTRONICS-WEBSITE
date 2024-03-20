@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping cart</title>
+    <link rel="stylesheet" href="zero.css">
+    <style>
+.product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+.cart {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+.footer{
+    align-items: center;
+} 
+
+    </style>
+</head>
+<body>
+    <div class="cart">
+        <h3>Our Cart</h3>
+        <ul id="cartItems"></ul>
+        <p>Total: $<span id="cartTotal">0</span></p>
+    </div>
+        <script>
+        const cart = [];
+
+        // Function to add items to the cart
+        function addToCart(itemName, itemPrice) {
+            cart.push({ name: itemName, itemPrice: price });
+            updateCartDisplay();
+        }
+
+        // Function to remove items from the cart
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartDisplay();
+        }
+
+        // Function to update cart display
+        function updateCartDisplay() {
+            const cartItemsList = document.getElementById("cartItems");
+            const cartTotalElement = document.getElementById("cartTotal");
+
+            // Clear existing items
+            cartItemsList.innerHTML = "";
+
+            // Calculate total price
+            let total = 0;
+            for (let i = 0; i < cart.length; i++) {
+                total += cart[i].price;
+                const listItem = document.createElement("li");
+                listItem.textContent = `${cart[i].name} - $${cart[i].price}`;
+                const removeButton = document.createElement("button");
+                removeButton.textContent = "Remove";
+                removeButton.onclick = () => removeFromCart(i);
+                listItem.appendChild(removeButton);
+                cartItemsList.appendChild(listItem);
+            }
+
+            // Update total price
+            cartTotalElement.textContent = total;
+        }
+    </script>
+    <footer>
+        <div class="bottom-bar">
+            <div class="max">
+                <div class="footer-content1">
+                    <h3>Contact Us</h3>
+                    <p>Email: TAK@gmail.com</p>
+                    <p>Phone: 671403969</p>
+                    <p>Address: bitsvalley ilab city-chemist</p>
+                </div>
+                <div class="footer-content">
+                    <h3>Quick Links</h3>
+                    <ul class="list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="ABOUT TAK.HTML">About</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="Lumahlee.HTML">Contact</a></li>
+                        <li><a href="TRADE WITH US.html">Why trade with us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content3">
+                    <h3>Follow Us</h3>
+                    <a href="#"><img src="IMAGES\facebook2.jpg" width="50px"></a>
+                    <a href="#"><img src="IMAGES\instagram.jpg" width="50px"></a>
+                    <a href="#"><img src="IMAGES\twiter.jpg" width="50px"></a>
+                    <a href="#"><img src="IMAGES\whatsapp,jpg.jpg" width="50px"></a>
+                </div>
+            </div>
+            <hr>
+            <p>© 2024 bitsvalley. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
+
